@@ -1,0 +1,23 @@
+number = input("Enter a positive integer: ")
+num = number
+
+
+def digits_of_number(num):
+    digit_list = []
+    for x in range(len(num)):
+        digit_list.append(num[x])
+    return digit_list
+
+
+while len(digits_of_number(num)) != 1:
+    num = sum(map(int, digits_of_number(num)))
+    num = str(num)
+else:
+    if (num == '3' or num == '6' or num == '9') and (number[len(number) - 1] == '0' or number[len(number) - 1] == '5'):
+        print("Fizz Buzz")
+    elif num == '3' or num == '6' or num == '9':
+        print("Fizz")
+    elif number[len(number) - 1] == '0' or number[len(number) - 1] == '5':
+        print("Buzz")
+    elif 0 == 0:
+        print(number)
